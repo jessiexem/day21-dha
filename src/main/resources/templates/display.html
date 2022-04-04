@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Game</title>
+</head>
+<body>
+    <img data-th-src="${game.image}" alt="">
+    <h2> Gid: <span data-th-text="${game.gid}"></span></h2>
+    <h2> Name: <span data-th-text="${game.name}"></span></h2>
+    <h2> Year: <span data-th-text="${game.year}"></span></h2>
+    <h2> Ranking: <span data-th-text="${game.ranking}"></span></h2>
+    <h2> Users Rated: <span data-th-text="${game.users_rated}"></span></h2>
+    <h2> Url: <span data-th-text="${game.url}"></span></h2>
+    <table>
+        <tr data-th-each="c:${comments}">
+            <td data-th-text="${c.user}"></td>
+            <td data-th-text="${c.rating}"></td>
+            <td data-th-text="${c.c_text}"></td>
+        </tr>
+    </table>
+</body>
+</html>
